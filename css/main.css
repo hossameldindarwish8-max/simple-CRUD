@@ -1,0 +1,74 @@
+:root {
+    --main-color: #1E1E1E;
+    --main-color-rgb: 30, 30, 30;
+    --secondary-color: #1813d7;
+    --secondary-color-rgb: 24, 19, 215;
+}
+
+textarea {
+    resize: none;
+}
+
+.product-card figure{
+    aspect-ratio: 259/162;
+}
+
+.product-card figure button.edit-btn{
+    width: 45px;
+    aspect-ratio: 1/1;
+    left: 0;
+    top: 0;
+}
+
+.product-card figure button.delete-btn{
+    width: 45px;
+    aspect-ratio: 1/1;
+    right: 0;
+    top: 0;
+}
+
+.product-card figure img {
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.product-description-paragraph{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.no-results{
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.no-results img{
+    width: 400px;
+    filter: grayscale(100%) !important;
+}
+
+/* X-Small: < 576px */
+
+/* Small: ≥ 576px */
+@media (min-width: 576px) {}
+
+/* Medium: ≥ 768px */
+@media (min-width: 768px) {
+    
+}
+
+/* Large: ≥ 992px */
+@media (min-width: 992px) {
+    .product-form {
+        width: 56.25rem;
+    }
+}
+
+/* X-Large: ≥ 1200px */
+@media (min-width: 1200px) {}
+
+/* XX-Large: ≥ 1400px */
+@media (min-width: 1400px) {}

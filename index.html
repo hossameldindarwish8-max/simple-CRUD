@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASCHNELL</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <main>
+        <div class="product-form rounded-3 p-4 mx-auto mb-5">
+            <div class="container">
+                <div class="form-floating mt-3">
+                    <input oninput="validateInput(this)" type="text" class="form-control" id="productName" placeholder="name@example.com">
+                    <span class="text-danger d-none">Product name must contain at least one uppercase and one lowercase letter.</span>
+                    <label for="productName">Product Name</label>
+                </div>
+                <div class="form-floating mt-3">
+                    <input oninput="validateInput(this)" type="text" class="form-control" id="productPrice" placeholder="name@example.com">
+                    <span class="text-danger d-none">Price must be between 6000 and 60000.</span>
+                    <label for="productPrice">Product Price</label>
+                </div>
+                <select oninput="validateInput(this)" id="productCategory" class="form-control mt-3">
+                    <option value="" disabled selected>Product Category</option>
+                    <option value="Mobiles">Mobiles</option>
+                    <option value="Laptops">Laptops</option>
+                    <option value="Watches">Watches</option>
+                    <option value="Tablets">Tablets</option>
+                    <option value="Headsets">Headsets</option>
+                </select>
+                <span class="text-danger d-none">Please select a valid category.</span>
+                <input oninput="validateInput(this)" type="file" class="form-control mt-3" accept="image/*" id="productImage">
+                <span class="text-danger d-none">Please upload a valid image.</span>
+                <textarea oninput="validateInput(this)" id="productDescription" placeholder="Product description" class="form-control mt-3"
+                    rows="3"></textarea>
+                <span class="text-danger d-none">Desciption must be between 4 and 250 characters.</span>
+                <button onclick="addProduct()" id="add-product" class="btn btn-primary w-100 d-block mt-3">Add Product</button>
+                <button onclick="updateProduct()" id="update-product" class="btn btn-outline-primary w-100 d-none mt-3">Update Product</button>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <input oninput="searchForProduct(this)" type="text" class="form-control mb-4" placeholder="Type to search...">
+                <div id="products-viewer" class="row g-4">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
